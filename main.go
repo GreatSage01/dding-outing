@@ -23,5 +23,5 @@ func main() {
 	// 启动http服务
 	http.Handle("/outgoing", &dingtalk.OutGoingHandler{})
 	_ = http.ListenAndServe(":8000", nil)
-	
+
 }
