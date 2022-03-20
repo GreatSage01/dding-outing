@@ -1,0 +1,12 @@
+system:
+  env: public
+  addr: 8888
+
+zap:
+  level: info
+  format: json
+  director: log
+  link-name: latest_log
+  showLine: true
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
