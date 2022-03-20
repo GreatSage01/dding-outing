@@ -8,6 +8,7 @@ import (
 
 	"zx/global"
 	"zx/initialize"
+	"zx/service/outgoing"
 )
 
 type server interface {
@@ -15,6 +16,9 @@ type server interface {
 }
 
 func RunWindowsServer() {
+
+	//outgoing 注册命令
+	outgoing.OutgoingInit()
 	//加载路由
 	Router := initialize.Routers()
 
