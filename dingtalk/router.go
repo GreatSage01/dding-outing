@@ -71,9 +71,10 @@ func (h *OutGoingHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		return
 	}
+
+	err = json.Unmarshal(buf, &obj)
 	fmt.Printf("msg: %v", utils.Struct2json(obj))
 	fmt.Printf("\n")
-	err = json.Unmarshal(buf, &obj)
 
 	if err != nil {
 		return
