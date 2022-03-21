@@ -25,7 +25,7 @@ func Routers() *gin.Engine {
 
 	//获取路由组实例
 
-	dingtalkRouter := router.RouterGroupApp.DingtalkRouter
+	appRouter := router.RouterGroupApp
 	PublicGroup := Router.Group("")
 	{
 		// 健康监测
@@ -35,7 +35,7 @@ func Routers() *gin.Engine {
 	}
 	PrivateGroup := Router.Group("")
 	{
-		dingtalkRouter.InitOutgoingRouter(PrivateGroup)
+		appRouter.InitOutgoingRouter(PrivateGroup)
 	}
 
 	global.ZX_LOG.Info("router register success")

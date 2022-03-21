@@ -1,4 +1,4 @@
-package dingreceive
+package service
 
 import (
 	"zx/global"
