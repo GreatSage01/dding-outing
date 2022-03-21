@@ -8,7 +8,7 @@ import (
 
 	"zx/global"
 	"zx/initialize"
-	"zx/service/outgoing"
+	"zx/service/dingreceive"
 )
 
 type server interface {
@@ -17,8 +17,8 @@ type server interface {
 
 func RunWindowsServer() {
 
-	//outgoing 注册命令
-	outgoing.OutgoingInit()
+	//钉钉机器人注册命令
+	dingreceive.DingreceiveInit()
 	//加载路由
 	Router := initialize.Routers()
 

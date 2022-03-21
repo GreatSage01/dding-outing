@@ -1,11 +1,11 @@
 package service
 
 import (
-	"zx/service/outgoing"
+	"zx/service/dingreceive"
 )
 
 type ServiceGroup struct {
-	OutgoingServiceGroup outgoing.ServiceGroup
+	DingreceiveServiceGroup dingreceive.ServiceGroup
 }
 
 var ServiceGroupApp = new(ServiceGroup)

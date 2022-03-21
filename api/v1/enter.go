@@ -1,11 +1,11 @@
 package v1
 
 import (
-	"zx/api/v1/outgoing"
+	"zx/api/v1/dingreceive"
 )
 
 type ApiGroup struct {
-	OutgoingApiGroup outgoing.ApiGroup
+	DingreceiveApiGroup dingreceive.ApiGroup
 }
 
 var ApiGroupApp = new(ApiGroup)
