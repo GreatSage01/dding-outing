@@ -2,8 +2,6 @@ package dingtalk
 
 import (
 	"strings"
-	"zx/global"
-	"zx/utils"
 )
 
 var cmdTable = make(map[string]*command)
@@ -31,7 +29,6 @@ func validateArity(arity int, cmdArgs []string) bool {
 }
 
 func ExecDingCommand(msg OutGoingModel) []byte {
-	global.ZX_LOG.Info(utils.Struct2json(msg))
 	content := msg.Text.Content
 	keyAndArgs := strings.Split(strings.TrimSpace(content), " ")
 	cmdName := strings.ToLower(keyAndArgs[0])

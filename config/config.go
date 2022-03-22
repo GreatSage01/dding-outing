@@ -1,6 +1,7 @@
 package config
 
 type Server struct {
-	Zap    Zap    `mapstructure:"zap" json:"zap" yaml:"zap"`
-	System System `mapstructure:"system" json:"system" yaml:"system"`
+	Zap      Zap      `mapstructure:"zap" json:"zap" yaml:"zap"`
+	System   System   `mapstructure:"system" json:"system" yaml:"system"`
+	Dingtalk Dingtalk `mapstructure:"dingtalk" json:"dingtalk" yaml:"dingtalk"`
 }

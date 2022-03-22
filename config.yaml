@@ -12,3 +12,9 @@ zap:
   encode-level: LowercaseColorLevelEncoder
   stacktrace-key: stacktrace
 
+
+
+dingtalk:
+  agentId: 1515778455
+  appKey: dingkaxiw6y35djuy1cb
+  appSecret: ZA4vTnGK7wy1hZDuZ-oG3IvC9ZaymOCCswbMeCe6V0guaeigq1aXDA91FIhyBr5J
