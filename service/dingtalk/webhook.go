@@ -56,7 +56,7 @@ func (d *DingTalk) sendMessage(msg iDingMsg) error {
 
 	value := url.Values{}
 	if d.session != "" {
-		value.Set("session", d.robotToken[rand.Intn(len(d.robotToken))])
+		value.Set("session", d.session)
 		uri = dingTalkBySessionURL + value.Encode()
 	} else {
 		value.Set("access_token", d.robotToken[rand.Intn(len(d.robotToken))])

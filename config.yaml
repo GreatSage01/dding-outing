@@ -1,6 +1,6 @@
 system:
   env: public
-  addr: 8888
+  addr: 8000
 
 zap:
   level: info

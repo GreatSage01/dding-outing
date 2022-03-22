@@ -7,10 +7,10 @@ import (
 )
 
 func (r *RouterGroup) InitOutgoingRouter(Router *gin.RouterGroup) {
-	dingreceiveRouter := Router.Group("dingreceive")
+	dingreceiveRouter := Router.Group("dingtalk")
 	var api = v1.ApiGroupApp
 	{
-		dingreceiveRouter.POST("test", api.Init)
+		dingreceiveRouter.POST("", api.Init)
 	}
 
 }

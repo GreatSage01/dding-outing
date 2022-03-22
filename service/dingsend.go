@@ -1,6 +1,7 @@
 package service
 
 import (
+	"fmt"
 	"strings"
 	"zx/global"
 	"zx/service/dingtalk"
@@ -8,8 +9,9 @@ import (
 
 func Dingsend(msg dingtalk.OutGoingModel) {
 	session := strings.Split(msg.SessionWebhook, "=")[1]
+	global.ZX_LOG.Info(session)
 	dt := dingtalk.InitDingTalkWithSession(session)
-
+	fmt.Printf("%+v", dt)
 	// 字体及颜色
 	dm := dingtalk.DingMap()
 	dm.Set("颜色测试", dingtalk.H2)
@@ -20,6 +22,7 @@ func Dingsend(msg dingtalk.OutGoingModel) {
 	dm.Set("警告", dingtalk.BLUE)
 	dm.Set("普通文字", dingtalk.N)
 	if err := dt.SendMarkDownMessageBySlice("color test", dm.Slice()); err != nil {
+		fmt.Println(err)
 		global.ZX_LOG.Error(err.Error())
 	}
 }
